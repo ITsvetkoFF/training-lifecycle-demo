@@ -1,6 +1,8 @@
+<div class="name">{{componentName}}</div>
 <div class="controls">
   <button (click)="toggleState()">toggle</button>
-  <span>I am {{state.toString()}}</span>
+  <button (click)="toggleDetach()">detach</button>
+  <span>{{getStateString()}} </span>
 </div>
 <div class="children">
   <lcd-level31 [state]="state"></lcd-level31>

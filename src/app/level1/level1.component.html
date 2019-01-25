@@ -1,8 +1,16 @@
+<div class="name">{{componentName}}</div>
 <div class="controls">
   <button (click)="toggleState()">toggle</button>
-  <span>I am {{state.toString()}}</span>
+  <button (click)="toggleBlocking()">block</button>
+  <span>{{getStateString()}} </span>
 </div>
 <div class="children">
-  <lcd-level21 [state]="state"></lcd-level21>
-  <lcd-level22 [state]="state"></lcd-level22>
+    <ng-container *ngIf="blocking">    
+      <lcd-level21></lcd-level21>
+      <lcd-level22></lcd-level22>
+    </ng-container>
+    <ng-container *ngIf="!blocking">    
+      <lcd-level21 [state]="state"></lcd-level21>
+      <lcd-level22 [state]="state"></lcd-level22>
+    </ng-container>
 </div>

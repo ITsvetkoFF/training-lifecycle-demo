@@ -6,7 +6,5 @@ import { BaseComponent } from "../base/base.component";
   templateUrl: './level31.component.html',
 })
 export class Level31Component extends BaseComponent {
-  protected logComponentName(hookName: string) {
-    console.log(`1. ${hookName}`);
-  }
+  public componentName = "\t\t\t3.1."
 }
