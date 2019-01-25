@@ -1,0 +1,8 @@
+<div class="controls">
+  <button (click)="toggleState()">toggle</button>
+  <span>I am {{state.toString()}}</span>
+</div>
+<div class="children">
+  <lcd-level31 [state]="state"></lcd-level31>
+  <lcd-level32 [state]="state"></lcd-level32>
+</div>
