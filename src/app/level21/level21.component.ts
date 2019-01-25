@@ -14,9 +14,9 @@ export class Level21Component extends BaseComponent {
 
   ngOnChanges(changes: SimpleChanges) {
     super.ngOnChanges(changes);
-    if (changes["state"] && changes["state"].currentValue) {
-      this.cd.detectChanges(); // Only for true it updates
-    }
+    // if (changes["state"] && changes["state"].currentValue) {
+    //   this.cd.detectChanges(); // Only for true it updates
+    // }
   }
 
   toggleDetach() {
