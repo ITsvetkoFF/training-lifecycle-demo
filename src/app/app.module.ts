@@ -25,7 +25,6 @@ import { Level34Component } from './level34/level34.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
