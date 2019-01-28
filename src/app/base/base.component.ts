@@ -10,15 +10,15 @@ import {
 
 export class BaseComponent implements OnInit, OnChanges, DoCheck, AfterViewInit, AfterViewChecked, AfterContentChecked, AfterContentInit, OnDestroy {
 
-  @Input() 
+  @Input()
   public state = true;
 
   @HostBinding("class")
   public get cmpClass() {
-    return this.state ? "green" : "red";
+    return this.state ? "green" : "red";  // Note that this will be updated even in detached state!
   }
 
-  @Input() 
+  @Input()
   public blocking = false;
 
   public detached = false;

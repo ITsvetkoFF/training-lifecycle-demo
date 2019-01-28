@@ -6,7 +6,7 @@ import { BaseComponent } from "../base/base.component";
   templateUrl: './level21.component.html',
 })
 export class Level21Component extends BaseComponent {
-  public componentName = "\t\t2.1."
+  public componentName = "\t\t2.1.";
 
   constructor(private cd: ChangeDetectorRef) {
     super()
@@ -19,8 +19,12 @@ export class Level21Component extends BaseComponent {
     // }
   }
 
+  detectChanges() {
+    this.cd.detectChanges();
+  }
+
   toggleDetach() {
-    super.toggleDetach()
+    super.toggleDetach();
     if (this.detached) {
       this.cd.detach();
     } else {
